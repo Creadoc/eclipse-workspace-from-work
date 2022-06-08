@@ -1,0 +1,61 @@
+package lab1Pack;
+
+public class ExtendsExample extends Thread{
+	@Override
+	public void run() {
+		//System.out.println("Name: " + Thread.currentThread().getName());
+		//System.out.println("ID: " + Thread.currentThread().getId());
+		
+		
+		int[] a = {1,2,3,4,5,6};
+		
+		try {
+			Thread.sleep(5000);
+		}catch(InterruptedException ex) {
+			System.out.println("some error: " + ex);
+		}
+		
+		
+		int sum = 0;
+		for(int i = 0; i < a.length/2; i++) {
+			
+			sum+= a[i];
+			
+		}
+		System.out.println(sum);
+	}
+	
+	public static void main(String[] args) {
+//		Thread t1 = new ExtendsExample();
+//		
+//		t1.start();
+		
+//		for(int i =0; i < 10; i++) {
+//			Thread t1 = new ExtendsExample();
+//			
+//			t1.start();
+//		}
+		
+		Thread t1 = new ExtendsExample();
+		int[] a = {1,2,3,4,5,6}; 
+		int sum = 0;
+		
+		t1.start();
+		try {
+			t1.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+//		Thread t2 = new ExtendsExample();
+//		
+//		t2.start();
+		
+//		int mid = a.length/2;
+		
+		
+		
+	}
+	
+}
+

@@ -1,0 +1,8 @@
+a,T,Z,1,100,class1
+b,F,Z,2,200,class1
+c,T,Y,3,300,class2
+d,F,Y,4,400,class2
+e,T,X,5,500,class3
+f,T,X,6,600,class3
+g,T,X,7,700,class3
+g,T,X,7,700,class3
